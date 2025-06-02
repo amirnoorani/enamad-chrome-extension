@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+  <meta charset="UTF-8" />
+  <title>Trustseal Info</title>
+
+  <!-- FontAwesome is used for the <i class="fa fa-star"> stars -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    integrity="sha512-Fo3rlrZj/k7ujTUcM10QWt0gN7XumcTUPKeu2dWvcjXkUhh+v8kB+Z4eBjJzXg8EpTtWNz+YbXTFEdO4YlZo/w=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  />
+
+  <style>
+    body {
+      font-family: sans-serif;
+      padding: 10px;
+      direction: rtl;
+    }
+
+    /* “No data” message is visible by default */
+    #no-data {
+      color: #666;
+      margin-top: 10px;
+    }
+
+    /* These two containers are hidden until we decide to show them */
+    #searchModal,
+    #notFoundModal {
+      display: none;
+      margin-top: 10px;
+    }
+
+    /* Simple row styling */
+    .row {
+      margin-bottom: 8px;
+    }
+
+    .label {
+      font-weight: bold;
+      margin-left: 4px;
+    }
+
+    /* The status text’s parent (so we can color it) */
+    #statusDiv {
+      font-weight: bold;
+      margin-top: 6px;
+    }
+
+    /* Gold color for stars */
+    .cyellow {
+      color: gold;
+    }
+
+    /* Style the “جزئیات بیشتر” button */
+    #np12 {
+      padding: 6px 12px;
+      border: none;
+      background: #007bff;
+      color: #fff;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    #np12:hover {
+      background: #0056b3;
+    }
+
+    /* For the “not found (suspended)” message */
+    #wrongmsg {
+      color: red;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <!-- Shown if we find no data or the data.id <= 0 -->
+  <div id="no-data">No data found for this domain.</div>
+
+  <!-- Shown when enamad_status is between 1 and 5 -->
+  <div id="searchModal">
+    <!-- Persian Name -->
+    <div class="row">
+      <span id="namepr"></span>
+    </div>
+
+    <!-- Province -->
+    <div class="row">
+      <span class="label">استان:</span>
+      <span id="province"></span>
+    </div>
+
+    <!-- City -->
+    <div class="row">
+      <span class="label">شهر:</span>
+      <span id="city"></span>
+    </div>
+
+    <!-- Approval Date -->
+    <div class="row">
+      <span class="label">تاریخ اعتبار:</span>
+      <span id="appDate"></span>
+    </div>
+
+    <!-- Expiration Date -->
+    <div class="row">
+      <span class="label">تاریخ انقضا:</span>
+      <span id="expDate"></span>
+    </div>
+
+    <!-- Rating stars or “بدون” -->
+    <div class="row">
+      <span id="star"></span>
+    </div>
+
+    <!-- Status icon + status text -->
+    <div class="row">
+      <img id="im" src="" alt="status icon" width="32" height="32" />
+      <span id="status"></span>
+    </div>
+
+    <!-- This wrapper lets us color the status text -->
+    <div id="statusDiv"></div>
+
+    <!-- “جزئیات بیشتر” button -->
+    <div class="row">
+      <button id="np12">جزئیات بیشتر</button>
+    </div>
+  </div>
+
+  <!-- Shown if enamad_status === 6 (suspended) -->
+  <div id="notFoundModal">
+    <p id="wrongmsg"></p>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>

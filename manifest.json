@@ -4,6 +4,7 @@
   "version": "1.1",
   "description": "Adds a thick lime border to any <a> whose href contains 'trustseal.enamad.ir'.",
   "permissions": [
+    "storage",
   "tabs",
   "activeTab",
   "scripting"
@@ -22,6 +23,7 @@
     "service_worker": "background.js"
   },
   "action": {
+    "default_popup": "popup.html",
     "default_icon": {
       "16": "icons/icon-default.png"
     }
