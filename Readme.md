@@ -1,3 +1,5 @@
+![Enamad Chrome Extension](./enamad-chrome-extension.jpg)
+
 # eNamad Chrome Extension 🛡️✨
 
 A Chrome extension to **instantly check the real eNamad status** of any website — right from your browser!  
