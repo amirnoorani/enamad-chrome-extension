@@ -1,8 +1,8 @@
 {
   "manifest_version": 3,
-  "name": "eNamad Highlighter",
+  "name": "eNamad Chrome Extension",
   "version": "1.1",
-  "description": "Adds a thick lime border to any <a> whose href contains 'trustseal.enamad.ir'.",
+  "description": "Checks website domain validity against 'trustseal.enamad.ir'.",
   "permissions": [
     "storage",
   "tabs",
