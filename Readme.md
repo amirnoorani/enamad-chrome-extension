@@ -19,7 +19,7 @@ No more trusting fake badges or spoofed links. This tool helps you **fight phish
 
 1. **Download or clone** this repository:
    ```
-   git clone https://github.com/your-username/eNamad.git
+   git clone https://github.com/amirnoorani/enamad-chrome-extension.git
    ```
 2. Open **Chrome** and go to `chrome://extensions`
 3. Enable **Developer mode** (top right)
